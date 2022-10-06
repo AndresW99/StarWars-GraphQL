@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const GET_LOCATIONS = gql`
-    query GetLocations {
+export const GET_MOVIES = gql`
+    query GetMovies {
     allFilms {
             films {
             title
