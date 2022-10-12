@@ -1,5 +1,5 @@
-import { RickAndMorty } from "../components/RickAndMorty";
 import { Home } from "../pages/Home";
+import { RickAndMorty } from "../pages/RickAndMorty";
 import { StarWars } from "../pages/StarWars";
 
 export const routes = [
@@ -19,6 +19,6 @@ export const routes = [
         path: 'rick-and-morty',
         to: 'rick-and-morty',
         Component: RickAndMorty,
-        name: 'RickAndMorty'
+        name: 'Rick And Morty'
     },
 ]

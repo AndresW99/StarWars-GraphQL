@@ -23,3 +23,25 @@ export const GET_MOVIES = gql`
     }
 `;
 
+export const GET_RaM = gql`
+    query {
+        characters(page: 1) {
+        info {
+            count
+        }
+            results {
+                id
+                name
+                gender
+                image
+        }
+        }
+            location(id: 1) {
+            id
+        }
+            episodesByIds(ids: [1, 2]) {
+            id
+        }
+    }
+`;
+

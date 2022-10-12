@@ -20,6 +20,5 @@ export const Movies = () => {
                 <br />
             </div>
         </div>
-
     ));
 }
