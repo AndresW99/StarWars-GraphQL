@@ -4,20 +4,12 @@ export const GET_MOVIES = gql`
     query GetMovies {
     allFilms {
             films {
-            title
-            director
-            releaseDate
-                speciesConnection {
-                    species {
-                    name
-                    classification
-                        homeworld {
-                            name
-                        }   
-                    }
-                }
+                title
+                director
+                releaseDate
                 id
                 episodeID
+                openingCrawl
             }
         }
     }
@@ -34,6 +26,8 @@ export const GET_RaM = gql`
                 name
                 gender
                 image
+                status
+                type
         }
         }
             location(id: 1) {
