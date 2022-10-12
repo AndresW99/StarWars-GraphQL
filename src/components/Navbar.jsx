@@ -10,7 +10,7 @@ export const Navbar = () => {
     
     <Suspense fallback={ <span>Loading...</span> }>
       <BrowserRouter>
-        <nav className="bg-zinc-200 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+        <nav className="bg-zinc-200 border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="https://flowbite.com/" className="flex items-center">
                     <img src={ logo } className="mr-3 h-6 sm:h-9" alt="GraphQL and React Logo" />
