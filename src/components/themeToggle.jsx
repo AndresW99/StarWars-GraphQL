@@ -12,12 +12,12 @@ const Toggle = () => {
             {theme === 'dark' ? (
                 <LightModeIcon
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+                    className="text-gray-500 dark:text-yellow-400 text-2xl cursor-pointer"
                 />
             ) : (
                     <DarkModeIcon
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                        className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+                        className="text-gray-700 dark:text-gray-400 text-2xl cursor-pointer"
                     />
                 )}
         </div>

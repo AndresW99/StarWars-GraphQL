@@ -4,8 +4,8 @@ import { StarWars } from "../pages/StarWars";
 
 export const routes = [
     {
-        path: 'home',
-        to: 'home',
+        path: '/',
+        to: '/',
         Component: Home,
         name: 'Home'
     },
