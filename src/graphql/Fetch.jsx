@@ -28,13 +28,22 @@ export const GET_RaM = gql`
                 image
                 status
                 type
-        }
-        }
-            location(id: 1) {
-            id
-        }
-            episodesByIds(ids: [1, 2]) {
-            id
+                episode {
+                    id
+                    name
+                    episode
+                }
+                location {
+                    id
+                    name
+                    dimension
+                  }
+                origin {
+                    id
+                    name
+                    dimension
+                }
+            }
         }
     }
 `;
