@@ -7,12 +7,19 @@ import MaleIcon from '@mui/icons-material/Male';
 import FemaleIcon from '@mui/icons-material/Female';
 import TransgenderIcon from '@mui/icons-material/Transgender';
 import { red, green, yellow } from '@mui/material/colors';
+import { PacmanLoader } from 'react-spinners';
 
 export const RickAndMortyC = () => {
   const { loading, error, data } = useQuery(GET_RaM, { context: { clientName: 'rickAndMorty' }});
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return( 
+      <div className="px-4 mx-auto max-w-screen-sm md:max-w-screen-md md:p-0 lg:max-w-screen-lg xl:max-w-screen-xl">
+        <div className="min-h-screen flex justify-center items-center">
+          <PacmanLoader color="#36d7b7" /> 
+        </div>
+      </div>
+    ) 
+    if (error) return <p>Error :(</p>;
 
   
   return data.characters.results.map(({ id, name, gender, image, status, type, location, origin }) => (
