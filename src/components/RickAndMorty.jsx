@@ -26,7 +26,7 @@ export const RickAndMortyC = () => {
   return data.characters.results.map(({ id, name, gender, image, status, type, location, origin }) => (
       <div className='col-span-12 md:col-span-6' key={ id }>
         <div className='p-2'>
-          <div className="cursor-pointer flex flex-col items-center bg-white dark:bg-sky-200 rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100">
+          <div className="cursor-pointer flex flex-col items-center bg-white dark:bg-cyan-100 rounded-lg border shadow-md md:flex-row md:max-w-xl dark:hover:bg-cyan-200 hover:bg-gray-100">
             <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-60 md:rounded-none md:rounded-l-lg" src={ image } alt="Rick And Morty" />
             <div className="flex flex-col p-4">
                 <h5 className="mb-2 -mt-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{name}</h5>
