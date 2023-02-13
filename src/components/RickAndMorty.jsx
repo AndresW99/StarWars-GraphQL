@@ -25,40 +25,50 @@ export const RickAndMortyC = () => {
   
   return data.characters.results.map(({ id, name, gender, image, status, type, location, origin }) => (
       <div className='col-span-12 md:col-span-6' key={ id }>
-        <div className='p-2'>
-          <div className="cursor-pointer flex flex-col items-center bg-white dark:bg-cyan-100 rounded-lg border shadow-md md:flex-row md:max-w-xl dark:hover:bg-cyan-200 hover:bg-gray-100">
-            <img className="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-60 md:rounded-none md:rounded-l-lg" src={ image } alt="Rick And Morty" />
-            <div className="flex flex-col p-4">
-                <h5 className="mb-2 -mt-8 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{name}</h5>
+        <div className="w-full lg:max-w-full lg:flex h-52 ">
+          <div className="h-52 lg:h-52 lg:w-52 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+              <img src={ image } alt="Rick And Morty" />
+          </div>
+          <div className="border-r border-b border-l dark:hover:bg-lime-300 dark:bg-cyan-100 bg-slate-300 hover:bg-slate-400 border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 rounded-b 
+          lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div className="mb-2">
+              <div className="text-gray-900 font-bold text-xl mb-1">
+                <h1>{ name }</h1>
+              </div>
 
-                <b className='text-sm'>Visto por primera vez:</b>
-                <p className='text-slate-500 dark:text-black'>{ origin.name }</p>
-                
-                <b className='text-sm mt-2'>Visto por última vez:</b>
-                <p className='text-slate-500'>{ location.name }</p>
+              <div>
+                <label className="text-sm"><b>Habitat:</b></label>
+                <p className='italic'>{ origin.name }</p>
+              </div>
 
-                <div className='grid grid-cols-12'>
-                  <div className='col-span-6 text-start'>
-                    <label>
-                      <b>Gender:</b>
-                      { 
-                        gender === 'Male' ? <MaleIcon />  : <FemaleIcon /> 
-                          &&
-                        gender === 'unknown' ? <TransgenderIcon />  : <FemaleIcon /> 
-                      }
-                    </label>
-                  </div>
-                  <div className='col-span-6 text-end'>
-                    <label>
-                      <b>Status: </b>
-                      {   status === 'Alive' ? <CircleIcon sx={{ color: green[300] }} /> : <CircleIcon sx={{ color: red[300] }} /> 
-                        && 
-                          status === 'unknown' ? <CircleIcon sx={{ color: yellow[600] }} /> : <CircleIcon sx={{ color: red[300] }} /> 
-                      }
-                    </label>
-                  </div>
-                </div>
-                <label className="mb-3 font-normal text-gray-700 dark:text-gray-400">{ type }</label>
+              <div>
+                <label className="text-sm"><b>Localización:</b></label>
+                <p className='italic'>{ location.name }</p>
+              </div>
+
+              <div className='mt-1'>
+                <label className=" text-md text-gray-700 dark:text-black-400">Tipo: <b className='italic'>{type || 'Normal'}</b></label>
+              </div>
+            </div>
+
+            <div className="flex items-center">  
+              <div className="text-sm">
+                <label className='leading-none'>
+                  <b>Status: </b>
+                  {status === 'Alive' ? <CircleIcon sx={{ color: green[300] }} /> : <CircleIcon sx={{ color: red[300] }} />
+                    &&
+                    status === 'unknown' ? <CircleIcon sx={{ color: yellow[600] }} /> : <CircleIcon sx={{ color: red[300] }} />
+                  }
+                </label>
+                <label className='mx-24 '>
+                  <b>Gender:</b>
+                  {
+                    gender === 'Male' ? <MaleIcon /> : <FemaleIcon />
+                      &&
+                      gender === 'unknown' ? <TransgenderIcon /> : <FemaleIcon />
+                  }
+                </label>
+              </div>
             </div>
           </div>
         </div>
