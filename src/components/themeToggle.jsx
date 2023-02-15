@@ -8,7 +8,7 @@ const Toggle = () => {
     const { theme, setTheme } = useContext(ThemeContext);
 
     return (
-        <div className="transition duration-500 ease-in-out rounded-full p-2">
+        <div className="transition duration-500 ease-in-out rounded-full lg:-mr-1 sm:-mr-7 p-2">
             {theme === 'dark' ? (
                 <LightModeIcon
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
