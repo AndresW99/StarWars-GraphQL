@@ -54,8 +54,9 @@ export const RickAndMortyC = () => {
             <div className='col-span-6 mt-2'>
               <label className='absolute bottom-4 text-white'>
                 <b>{ status === 'Alive' ? 'Vivo ' : 'Muerto ' && status === 'unknown' ? 'Desaparecido ' : 'Muerto ' }</b>
-                {status === 'Alive' ? <CircleIcon sx={{ color: green[300] }} /> : <CircleIcon sx={{ color: red[300] }} />
-                  &&
+                {
+                  status === 'Alive' ? <CircleIcon sx={{ color: green[300] }} /> : <CircleIcon sx={{ color: red[300] }} />
+                    &&
                   status === 'unknown' ? <CircleIcon sx={{ color: yellow[600] }} /> : <CircleIcon sx={{ color: red[300] }} />
                 }
               </label>
@@ -66,7 +67,7 @@ export const RickAndMortyC = () => {
                 {
                   gender === 'Male' ? <MaleIcon sx={{ color: blue[300] }} /> : <FemaleIcon sx={{ color: pink[300] }} />
                     &&
-                    gender === 'unknown' ? <TransgenderIcon sx={{ color: purple[200] }} /> : <FemaleIcon sx={{ color: pink[300] }} />
+                  gender === 'unknown' ? <TransgenderIcon sx={{ color: purple[200] }} /> : <FemaleIcon sx={{ color: pink[300] }} />
                 }
               </label>
             </div>

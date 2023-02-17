@@ -17,7 +17,7 @@ export const GET_MOVIES = gql`
 
 export const GET_RaM = gql`
     query {
-        characters(page: 1) {
+        characters(page: ${Math.floor(Math.random() * 42) + 1}) {
         info {
             count
         }
