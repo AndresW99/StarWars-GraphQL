@@ -13,7 +13,7 @@ export const Movies = () => {
 
     
     return data.allFilms.films.map(({ episodeID, director, releaseDate, title, openingCrawl }) => (
-        <div className='md:col-span-6 col-span-12 group block rounded overflow-hidden shadow-md border bg-white hover:bg-gray-400 hover:ring-sky-500 cursor-pointer' key={ episodeID }>
+        <div className='md:col-span-6 col-span-12 group block rounded overflow-hidden shadow-md border bg-white hover:bg-cyan-800 hover:ring-sky-500 cursor-pointer' key={ episodeID }>
             <div className='p-2'>
                 <h1 className='text-center text-slate-900 group-hover:text-white font-semibold'> {title}</h1>
                 
